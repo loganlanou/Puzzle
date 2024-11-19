@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Puzzle</title>
+    <style>
+        section.snow-container {
+            display: grid;
+            grid-template-columns: repeat(4, 150px);
+            grid-template-rows: repeat(3, 133px);
+            column-gap: 0px;
+            row-gap: 0px;
+        }
+
+        section.grid-container {
+            display: grid;
+            gap: 10px;
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-areas:
+                '. . hd hd . .'
+                'mn mn mn mn mn mn'
+                '.  ft ft ft ft .'
+            ;
+        }
+
+        div.grid-item1 {
+            grid-area: hd;
+            grid-column-start: 3;
+            grid-column-end: span 2;
+            align-content: center;
+            /*header*/
+        }
+
+        div.grid-item2 {
+            grid-area: mn;
+            /*main content*/
+        }
+
+        div.grid-item3 {
+            grid-area: ft;
+            grid-column-start: 3;
+            grid-column-end: span 2;
+            align-content: center;
+            /*footer*/
+        }
+
+        section.div.flex-item {
+            display: flex;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="grid-container">
+        <div class="grid-item1">Logan LaNou</div>
+        <div class="grid-item2">
+            <section class="snow-container">
+                <div class="flex-item"><img src="puzzle2_k.jpg"></div>
+                <div class="flex-item"><img src="puzzle2_m.jpg"></div>
+                <div class="flex-item"><img src="puzzle2_e.jpg"></div>
+                <div class="flex-item"><img src="puzzle2_g.jpg"></div>
+
+                <div class="flex-item"><img src="puzzle2_a.jpg"></div>
+                <div class="flex-item"><img src="puzzle2_d.jpg"></div>
+                <div class="flex-item"><img src="puzzle2_l.jpg"></div>
+                <div class="flex-item"><img src="puzzle2_b.jpg"></div>
+
+                <div class="flex-item"><img src="puzzle2_f.jpg"></div>
+                <div class="flex-item"><img src="puzzle2_j.jpg"></div>
+                <div class="flex-item"><img src="puzzle2_h.jpg"></div>
+                <div class="flex-item"><img src="puzzle2_i.jpg"></div>
+
+                <div class="flex-item hidden"><img src="puzzle2_c.jpg"></div>
+            </section>
+            Snowmen Puzzle: A picture of two snowmen on a snow capped mountain.
+        </div>
+        <div class="grid-item3">November 14th 2024</div>
+    </section>
+</body>
+
+</html>
